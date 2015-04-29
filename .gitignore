@@ -4,5 +4,6 @@ Saved/
 Intermediate/Config/
 Intermediate/CachedAssetRegistry.bin
 Intermediate/ReimportCache/3688439234.bin
-Intermediate/
+Intermediate/Build/
+Intermediate/Staging
 *.sdf
