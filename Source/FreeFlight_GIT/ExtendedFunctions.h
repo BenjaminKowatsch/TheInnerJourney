@@ -3,7 +3,9 @@
 #pragma once
 
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Runtime/Core/Public/Containers/Array.h"
 #include "ExtendedFunctions.generated.h"
+
 
 /**
  * 
@@ -16,8 +18,7 @@ class FREEFLIGHT_GIT_API UExtendedFunctions : public UBlueprintFunctionLibrary
 public:
 	UFUNCTION(BlueprintPure, Category = "TobiasBPLibrary")
 		static float calculateBreak(float currentSpeed, float decelerationValue);
-
-
-	
+	UFUNCTION(BlueprintCallable, Category = "Array")
+		static int32 getRandomElementIndexFromRange(int32 size, TArray<int32> excludedIndices);
 	
 };
