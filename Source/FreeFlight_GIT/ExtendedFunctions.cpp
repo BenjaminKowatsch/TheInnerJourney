@@ -17,12 +17,13 @@ float UExtendedFunctions::calculateBreak(float currentSpeed, float decelerationV
 
 int32 UExtendedFunctions::getRandomElementIndexFromRange(int32 size, TArray<int32> excludedIndices)
 {
-	int32 result = -1;
+	int32 lastindex = size - 1;
+	int32 result = FMath::RandRange(0, lastindex);
+	if(size>excludedIndices.Num())
 	{
 		TArray<int32> a;
 		for (int i = 0; i<size; ++i)
 			a.Add(i);
-		int32 lastindex = a.Num() - 1;
 		for (auto It = excludedIndices.CreateConstIterator(); It; ++It)
 			a.Swap(*It, lastindex--);
 		result = a[FMath::RandRange(0, lastindex)];
