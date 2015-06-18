@@ -22,10 +22,12 @@ int32 UExtendedFunctions::getRandomElementIndexFromRange(int32 size, TArray<int3
 	if(size>excludedIndices.Num())
 	{
 		TArray<int32> a;
-		for (int i = 0; i<size; ++i)
+		for (int i = 0; i < size; ++i)
 			a.Add(i);
+
 		for (auto It = excludedIndices.CreateConstIterator(); It; ++It)
 			a.Swap(*It, lastindex--);
+
 		result = a[FMath::RandRange(0, lastindex)];
 	}
 	return result;
