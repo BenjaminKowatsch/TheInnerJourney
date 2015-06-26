@@ -14,6 +14,10 @@
 		{
 			"Name": "CodeView",
 			"Enabled": true
+		},
+		{
+			"Name": "ScalabilityUIPlugin",
+			"Enabled": false
 		}
 	]
 }
